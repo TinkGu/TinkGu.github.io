@@ -47,29 +47,31 @@
 
 <meta name="description" content="为什么我的眼中常含泪水? 是洋葱, 布兰登·艾克在js里放了洋葱…
 
-作用域js中变量的作用域, 只有全局作用域和函数作用域, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)
-全局作用域没什么好讲的, 全局变量有全局作用域. 本文主要讲函数作用域.
+js中变量的作用域, 只有全局作用域和函数作用域, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)
+全局作用域没什么好讲的, 全局变量有全局作用域. 下面主要讲函数作用域.
 表现定义在函数内部的变量和参数, 在函数外部不可见, 在函数内部任何位置的变量则在函数内任何位置都可见.
-实现js通过作用域链Scope C">
+实现js通过作用域链Scope Chai">
 <meta property="og:type" content="article">
 <meta property="og:title" content="让我们一层一层地剥开作用域">
 <meta property="og:url" content="http://yoursite.com/2015/10/25/js-scope/index.html">
 <meta property="og:site_name" content="Tink">
 <meta property="og:description" content="为什么我的眼中常含泪水? 是洋葱, 布兰登·艾克在js里放了洋葱…
 
-作用域js中变量的作用域, 只有全局作用域和函数作用域, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)
-全局作用域没什么好讲的, 全局变量有全局作用域. 本文主要讲函数作用域.
+js中变量的作用域, 只有全局作用域和函数作用域, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)
+全局作用域没什么好讲的, 全局变量有全局作用域. 下面主要讲函数作用域.
 表现定义在函数内部的变量和参数, 在函数外部不可见, 在函数内部任何位置的变量则在函数内任何位置都可见.
-实现js通过作用域链Scope C">
-<meta property="og:updated_time" content="2015-12-05T13:59:13.382Z">
+实现js通过作用域链Scope Chai">
+<meta property="og:image" content="https://ooo.0o0.ooo/2015/12/05/56639d1fafd6e.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2015/12/05/5663b3a43220f.png">
+<meta property="og:updated_time" content="2015-12-08T08:04:07.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让我们一层一层地剥开作用域">
 <meta name="twitter:description" content="为什么我的眼中常含泪水? 是洋葱, 布兰登·艾克在js里放了洋葱…
 
-作用域js中变量的作用域, 只有全局作用域和函数作用域, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)
-全局作用域没什么好讲的, 全局变量有全局作用域. 本文主要讲函数作用域.
+js中变量的作用域, 只有全局作用域和函数作用域, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)
+全局作用域没什么好讲的, 全局变量有全局作用域. 下面主要讲函数作用域.
 表现定义在函数内部的变量和参数, 在函数外部不可见, 在函数内部任何位置的变量则在函数内任何位置都可见.
-实现js通过作用域链Scope C">
+实现js通过作用域链Scope Chai">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -231,31 +233,20 @@
       
         <span itemprop="articleBody"><blockquote class="blockquote-center"><p>为什么我的眼中常含泪水? 是洋葱, 布兰登·艾克在js里放了洋葱…</p>
 </blockquote>
-<h2 id="作用域">作用域</h2><p>js中变量的作用域, 只有全局作用域和<strong>函数作用域</strong>, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)</p>
-<p>全局作用域没什么好讲的, 全局变量有全局作用域. 本文主要讲函数作用域.</p>
+<p>js中变量的作用域, 只有全局作用域和<strong>函数作用域</strong>, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)</p>
+<p>全局作用域没什么好讲的, 全局变量有全局作用域. 下面主要讲函数作用域.</p>
 <h1 id="表现">表现</h1><p>定义在函数内部的变量和参数, 在函数外部不可见, 在函数内部任何位置的变量则在函数内任何位置都可见.</p>
-<h1 id="实现">实现</h1><p>js通过<strong>作用域链Scope Chain</strong>来实现作用域, 与C不同, 作用域链不是基于栈而是基于列表的.</p>
-<ol>
-<li><p>当定义一个函数时, 将该时刻的作用域链连接到这个函数对象的<strong>[[scope]]</strong>属性.<br>[[scope]]是一个内部属性, 仅供js引擎访问, 它包含了函数被创建的作用域中的对象的集合.</p>
-</li>
-<li><p>当调用这个函数时, 会创建一个叫<strong>运行时上下文(execution context)</strong>的内部对象, 它定义了函数执行时的环境.<br>每个运行时上下文都会有自己的作用域链用于标识符解析, 这个作用域链先是被初始化当前运行函数的[[scope]]中所包含的所有对象, 然后再将一个新创建的叫<strong>活动对象(active object)</strong>的对象推入到作用域链的最前端.<br>活动对象中包含了函数的所有局部变量, 命名参数, 参数集合和this.</p>
-</li>
-</ol>
-<p>当运行时上下文被销毁, 活动对象也随之销毁.</p>
-<ol>
-<li>在发生标识符解析(或称<strong>变量解析variable resolution</strong>)的时候, 就逆向查询当前作用域链的每一个活动对象的属性.<br>如果找到同名的就返回, 找不到, 那就是这个标识符没有被定义, 抛出ReferenceError.</li>
-</ol>
-<p>总结</p>
-<ul>
-<li>在定义函数时, 就决定了函数的scope属性, 其作用域也在那时被确定下来.</li>
-<li>由于逆向查找, 标识符所在位置越深, 读写越慢, 所以少用全局变量;<br>一个跨作用域的变量被引用了一次以上, 那么最好把它变成局部变量再使用.</li>
-</ul>
+<h1 id="实现">实现</h1><p>js通过<strong>作用域链Scope Chain</strong>来实现作用域, 与C不同, js的作用域链不是基于栈而是基于列表的.</p>
+<p>1  当定义一个函数时, 将该时刻的作用域链连接到这个函数对象的<strong>[[scope]]</strong>属性.<br>[[scope]]是一个内部属性, 仅供js引擎访问, 它包含了函数被创建的作用域中的对象的集合.</p>
+<p>2  当调用这个函数时, 会创建一个叫<strong>执行时上下文(execution context)</strong>的内部对象, 它定义了函数执行时的环境.<br>每个执行时上下文都会有自己的作用域链用于标识符解析, 这个作用域链先是被初始化当前执行函数的[[scope]]中所包含的所有对象, 然后再将一个新创建的叫<strong>活动对象(activation object)</strong>的对象推入到作用域链的最前端.<br>活动对象中包含了函数的所有局部变量, 命名参数, 参数集合和this.</p>
+<p>当执行时上下文被销毁, 活动对象也随之销毁.</p>
+<p>3  在发生标识符解析(或称<strong>变量解析variable resolution</strong>)的时候, 就逆向查询当前作用域链的每一个活动对象的属性.<br>如果找到同名的就返回, 找不到, 那就是这个标识符没有被定义, 抛出ReferenceError.</p>
 <h2 id="用实例表述">用实例表述</h2><h3 id="定义时刻">定义时刻</h3><ul>
-<li>创建[[scope]]属性</li>
+<li>创建[[scope]]属性, 收集保存作用域内的被创建的对象.</li>
 <li>把[[scope]]属性链接到作用域链</li>
-<li>设置[[scope]]属性指向的活动对象(本例为全局活动对象window active object)<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = function(arg1, arg2)&#123;</span><br><span class="line">  <span class="keyword">var</span> mood = arg1 + arg2;</span><br><span class="line">  <span class="keyword">var</span> moha = makeABigNews();</span><br><span class="line">  moha();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function makeAbigNews()&#123;</span><br><span class="line">  <span class="keyword">var</span> mood = 'angry!';</span><br><span class="line">  <span class="keyword">var</span> <span class="literal">result</span> = function()&#123;</span><br><span class="line">    console.log('I am ' + mood);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">result</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>设置[[scope]]属性指向的活动对象(本例为全局活动对象window activation object)</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">arg1, arg2</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> mood = arg1 + arg2;  <span class="comment">// 调试点1</span></span><br><span class="line">  <span class="keyword">var</span> moha = makeABigNews();</span><br><span class="line">  moha();  <span class="comment">// 调试点4</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeABigNews</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 调试点2</span></span><br><span class="line">  <span class="keyword">var</span> mood = <span class="string">'angry!'</span>;</span><br><span class="line">  <span class="keyword">var</span> result = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 调试点3</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'I am '</span> + mood);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="调用时刻">调用时刻</h3><ul>
 <li>创建activeObj(假设名)活动对象, 同时创建arguments属性.</li>
 <li><p>以保存为属性的形式, 将函数的每一个<strong>形参</strong>和<strong>局部变量</strong>添加到活动对象中</p>
@@ -263,15 +254,37 @@
 </li>
 <li>把实参赋给形参</li>
 <li>把activeObj活动对象作为作用域链最前端</li>
-<li>把fun函数的[[scope]]属性所指向的活动对象(假设在浏览器中的话, 本例为window active object)也加入到作用域链</li>
+<li>把fun函数的[[scope]]属性所指向的活动对象(假设在浏览器中的话, 本例为window activation object)也加入到作用域链</li>
 </ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">fun</span><span class="params">('excited', '!')</span>; <span class="comment">// I am angry!</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="变量解析">变量解析</h3><p>还以上面的代码为例, 讲讲为什么最终输出<code>I am angry!</code>.<br>当调用fun函数的时候, 其作用域链是由{window active object}-&gt;{activeObj}组成的.<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[[scope chain]]</span> = [</span><br><span class="line">&#123;</span><br><span class="line">     arg1: <span class="string">'excited'</span>,</span><br><span class="line">     arg2: <span class="string">'!'</span>,</span><br><span class="line">     mood: undefined,</span><br><span class="line">     moha: undefined,</span><br><span class="line">     arguments: [...]</span><br><span class="line"></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window active object</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure></p>
-<p>当调用进入moha的函数体的时候, 此时moha的作用域链为<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     mood: undefined,</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window active <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure></p>
-<p>在定义result函数的时候, result函数的scope为<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     mood: 'angry!',</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window active <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure></p>
-<p>从moha函数返回以后, 在fun函数中调用result的时候, 发生了标识符解析, 而此时的作用域链为<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     <span class="literal">result</span> call <span class="keyword">object</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     mood: 'angry!',</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window active <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure></p>
-<p>所以执行时, 返回的是moha活动对象中的mood属性.</p>
-<h2 id="特例">特例</h2><p>通过构造器创建的函数是访问不到外层的局部变量的.<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> func = <span class="keyword">new</span> <span class="function"><span class="keyword">Function</span><span class="params">(<span class="string">"console.log(typeof i);"</span>)</span></span>;</span><br><span class="line">    func(); <span class="comment">// undefined</span></span><br><span class="line">&#125;</span><br><span class="line">outer();</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调试点0</span></span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">('excited', '!')</span>; <span class="comment">// I am angry!</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="图表展示流">图表展示流</h3><p>1  定义时<br><img src="https://ooo.0o0.ooo/2015/12/05/56639d1fafd6e.png" alt="定义时作用域链"></p>
+<p>2  执行时<br><img src="https://ooo.0o0.ooo/2015/12/05/5663b3a43220f.png" alt="执行时作用域链"></p>
+<h2 id="调试追踪">调试追踪</h2><p>还以上面的代码为例, 配合chrome-devtool, 查看作用域链的变化, 讲讲为什么最终输出<code>I am angry!</code>.</p>
+<p>调试点的编号也指明了调试时解释跳转的顺序.</p>
+<p>1  当调用fun函数的时候, 其作用域链是由{window activation object}-&gt;{activeObj}组成的.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 刚刚进入fun函数, 即源码处的调试点1</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     <span class="built_in">arguments</span>: [<span class="string">'excited'</span>, <span class="string">'!'</span>],</span><br><span class="line">     arg1: <span class="string">'excited'</span>,</span><br><span class="line">     arg2: <span class="string">'!'</span>,</span><br><span class="line">     mood: <span class="literal">undefined</span>,</span><br><span class="line">     moha: <span class="literal">undefined</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     <span class="built_in">window</span> activation object</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<p>2  当调用进入makeABigNews的函数体的时候, 此时makeABigNews的作用域链为</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 对应调试点<span class="number">2</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     mood: undefined,</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window activation <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<p>3  在定义result函数的时候, result函数的scope为</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 对应调试点<span class="number">3</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     mood: 'angry!',</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window activation <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<p>4  从makeABigNews函数返回以后, 在fun函数中调用result的时候, 发生了标识符解析, 而此时的作用域链为</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 对应调试点<span class="number">4</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     <span class="literal">result</span> call <span class="keyword">object</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     mood: 'angry!',</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window activation <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<p>可以看到, 这时候并不包含fun的活动对象, 所以返回的是makeABigNews活动对象中的mood属性.</p>
+<h2 id="特例">特例</h2><p>通过构造器创建的函数是访问不到外层的局部变量的.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> func = <span class="keyword">new</span> <span class="function"><span class="keyword">Function</span><span class="params">(<span class="string">"console.log(typeof i);"</span>)</span></span>;</span><br><span class="line">    func(); <span class="comment">// undefined</span></span><br><span class="line">&#125;</span><br><span class="line">outer();</span><br></pre></td></tr></table></figure>
+<h1 id="总结">总结</h1><ul>
+<li>在定义函数时, 就决定了函数的scope属性, 其作用域也在那时被确定下来.</li>
+<li>由于逆向查找, 标识符所在位置越深, 读写越慢, 所以少用全局变量.</li>
+<li>一个跨作用域的变量被引用了一次以上, 那么最好把它变成局部变量再使用.</li>
+</ul>
+<h1 id="Todo">Todo</h1><ul>
+<li>ES6中的模块作用域</li>
+<li>ES6中的let带来的块级作用域</li>
+</ul>
+<h1 id="References">References</h1><ul>
+<li><a href="http://www.cnblogs.com/lhb25/archive/2011/09/06/javascript-scope-chain.html" target="_blank" rel="external">JavaScript 开发进阶：理解 JavaScript 作用域和作用域链</a></li>
+<li><a href="http://www.laruence.com/2009/05/28/863.html" target="_blank" rel="external">Javascript作用域原理 by laruence</a></li>
+</ul>
 </span>
       
     </div>
@@ -289,16 +302,16 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/30/amway-gitbook/" rel="prev">
-                <i class="fa fa-chevron-left"></i> Gitbook
+              <a href="/2015/11/12/modularity/" rel="prev">
+                <i class="fa fa-chevron-left"></i> JS模块化
               </a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/18/translate-battterfly-book/" rel="next">
-                化蝶 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/09/18/the-way-to-build-my-blog/" rel="next">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -362,7 +375,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -376,7 +389,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -404,7 +417,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">1.</span> <span class="nav-text">作用域</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表现"><span class="nav-number"></span> <span class="nav-text">表现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number"></span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用实例表述"><span class="nav-number">1.</span> <span class="nav-text">用实例表述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义时刻"><span class="nav-number">1.1.</span> <span class="nav-text">定义时刻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用时刻"><span class="nav-number">1.2.</span> <span class="nav-text">调用时刻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量解析"><span class="nav-number">1.3.</span> <span class="nav-text">变量解析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特例"><span class="nav-number">2.</span> <span class="nav-text">特例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#表现"><span class="nav-number">1.</span> <span class="nav-text">表现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用实例表述"><span class="nav-number">2.1.</span> <span class="nav-text">用实例表述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义时刻"><span class="nav-number">2.1.1.</span> <span class="nav-text">定义时刻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用时刻"><span class="nav-number">2.1.2.</span> <span class="nav-text">调用时刻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图表展示流"><span class="nav-number">2.1.3.</span> <span class="nav-text">图表展示流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试追踪"><span class="nav-number">2.2.</span> <span class="nav-text">调试追踪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特例"><span class="nav-number">2.3.</span> <span class="nav-text">特例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Todo"><span class="nav-number">4.</span> <span class="nav-text">Todo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">5.</span> <span class="nav-text">References</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

@@ -36,7 +36,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -45,15 +45,22 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="Think without help">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tink">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="JS模块化的历史演进、ES6 Module和模块管理工具
+
+像我这种从java入门编程的人, 在学习java的时候, 可能对模块化并没有太多的认识, 因为java中一个类一个文件, 引用其他类只需import导入, 结构十分清晰. 就像人每时每刻都在呼吸空气, 对空气的感觉并没有那么敏感, 直到有人抽走了他周身的空气, 他才会感觉将要窒息. 是的, 就好像我玩起了Node, 立志做个前端(此处应有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS模块化">
+<meta property="og:url" content="http://yoursite.com/2015/11/12/modularity/index.html">
 <meta property="og:site_name" content="Tink">
-<meta property="og:description" content="Think without help">
+<meta property="og:description" content="JS模块化的历史演进、ES6 Module和模块管理工具
+
+像我这种从java入门编程的人, 在学习java的时候, 可能对模块化并没有太多的认识, 因为java中一个类一个文件, 引用其他类只需import导入, 结构十分清晰. 就像人每时每刻都在呼吸空气, 对空气的感觉并没有那么敏感, 直到有人抽走了他周身的空气, 他才会感觉将要窒息. 是的, 就好像我玩起了Node, 立志做个前端(此处应有">
+<meta property="og:updated_time" content="2015-12-08T09:24:37.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tink">
-<meta name="twitter:description" content="Think without help">
+<meta name="twitter:title" content="JS模块化">
+<meta name="twitter:description" content="JS模块化的历史演进、ES6 Module和模块管理工具
+
+像我这种从java入门编程的人, 在学习java的时候, 可能对模块化并没有太多的认识, 因为java中一个类一个文件, 引用其他类只需import导入, 结构十分清晰. 就像人每时每刻都在呼吸空气, 对空气的感觉并没有那么敏感, 直到有人抽走了他周身的空气, 他才会感觉将要窒息. 是的, 就好像我玩起了Node, 立志做个前端(此处应有">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -65,7 +72,7 @@
 
 
 
-  <title> Tink </title>
+  <title> JS模块化 | Tink </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -86,9 +93,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -164,9 +169,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -182,117 +187,7 @@
             
             
               
-                <a class="post-title-link" href="/2015/11/30/amway-gitbook/" itemprop="url">
-                  Gitbook
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-30T17:36:41+08:00" content="2015-11-30">
-              2015-11-30
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <blockquote class="blockquote-center"><p>文艺码农的铜版纸</p>
-</blockquote>
-<h1 id="Gitbook">Gitbook</h1><p>今天学习React的时候, 读到一份官方文档的<a href="https://hulufei.gitbooks.io/react-tutorial/content/introduction.html" target="_blank" rel="external">中文版</a>, 阅读界面简洁大方, 跟我用的这个博客主题有些类似.<br><img src="https://ooo.0o0.ooo/2015/10/30/56339754c6dbf.png" alt="gitbook效果.png" title="gitbook效果"></p>
-<p>看了一下它的域名, 发现并不是xx.github.io, 而是xx.gitbooks.io. 也就是说, 不是通过github pages构建的, 查过以后发现, gitbook并不是github推出的一款服务, 尽管他们长得很像, 操作类似, 理念相同, 显然gitbook inspired by github.</p>
-<p>Gitbook的官网是<a href="https://www.gitbook.com/@tink/dashboard" target="_blank" rel="external">GitBook.com</a>. 其实9月份我刚进去的时候, 样子还不是现在这样, 大概就是10月到11月之间UI改版了一次, 搞得跟github简直可以说是一模一样… 连notification气泡的样式都像素级相似.<br>Gitbook主打在线协作共同写作, 这理念是继承了github的开源精神. 种类很多, 比如在它的热门项目里, 有台北市长柯文哲用该工具写的书(噗). 不过总的还是以技术书籍居多, 比如<a href="https://www.gitbook.com/book/numbbbbb/-the-swift-programming-language-/details" target="_blank" rel="external">《The Swift Programming Language》中文版</a>.</p>
-<p>对于普通玩家来说, 就算不懂git也没关系, gitbook提供了全平台的客户端编辑器, 学习下markdown语法就可以写成自己的电子书. 像我就比较爱折腾, 还有点电子洁癖, 懒得多下一个软件占地方.<br>Gitbook另外一个好处就是, 可以允许书籍连接某个github仓库, 一旦有新的commit被push到仓库, 对应的书籍就会自动更新.</p>
-<p>我觉得, 如果要成体系地整理知识, 以书的形式来展现可能要比东一篇西一篇的博文来得好, 有些琐碎的东西也不方便放进博客, 显得很水的样子. 从阅读体验上来说, 带目录的电子也比较好.</p>
-<h1 id="特点">特点</h1><p>除了利用git, 同步github仓库以外, gitbook对于程序员用户来说还有下面几个优势:</p>
-<ul>
-<li>使用的是md语法, 仅就基础样式就很简洁方便</li>
-<li>直接生成在线网站, 相当于免费主页, 还支持下载.pdf, .epub, .mobi</li>
-<li>支持绑定其它域名</li>
-<li>提供了命令行工具</li>
-<li>还有不少的插件, 官方提供了dev-api, 有余力的可自行开发</li>
-</ul>
-<p>导出为epub这点倒是蛮好的, 可以下载一本他人写好的技术书然后放进多看慢慢看.</p>
-<h1 id="快速入门">快速入门</h1><p>GitBook可以通过npm安装命令行工具, 不过我刚摆弄这玩意儿的时候, 没有从官网的文档上找到命令行的命令介绍, 所以就通过使用网站完成了基础的操作.</p>
-<p>第一步, 直接注册, 验证通过后, 在<code>Your Profile</code>中, 关联GitHub账号.<br>第二步, 选择新建书籍,在选项卡里选择关联事先在GitHub新建的仓库.<br><img src="https://ooo.0o0.ooo/2015/10/30/563384f9396ba.png" alt="gitbook关联github的仓库.png" title="新建book, 并关联github的仓库, 实现同步"><br>之后, 就完成了GitHub的关联, 默认生成了如下文件<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">默认生成的文件目录</span><br><span class="line">book/</span><br><span class="line">├── README.md  		// 书籍简介</span><br><span class="line">├── chapter1.md 	// 章节文件</span><br><span class="line">└── SUMMARY.md 	 	// 书籍的目录结构</span><br><span class="line"></span><br><span class="line">目录结构文件book/SUMMARY.md</span><br><span class="line"><span class="bullet">* </span>[<span class="link_label">First Chapter</span>](<span class="link_url">chapter1.md</span>)</span><br><span class="line"></span><br><span class="line">成形的常见的目录结构是这样的</span><br><span class="line">├── chapter1</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── section1.md</span><br><span class="line">│   └── section2.md</span><br><span class="line">├── chapter2</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── section1.md</span><br><span class="line">│   └── section2.md</span><br><span class="line">├── end</span><br><span class="line">│   └── README.md</span><br><span class="line">├── README.md</span><br><span class="line">└── SUMMARY.md</span><br><span class="line"></span><br><span class="line">其SUMMARY.md则为</span><br><span class="line"><span class="bullet">* </span>[<span class="link_label">简介</span>](<span class="link_url">README.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="link_label">第一章</span>](<span class="link_url">chapter1/README.md</span>)</span><br><span class="line"> - [<span class="link_label">第一节</span>](<span class="link_url">chapter1/section1.md</span>)</span><br><span class="line"> - [<span class="link_label">第二节</span>](<span class="link_url">chapter1/section2.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="link_label">第二章</span>](<span class="link_url">chapter2/README.md</span>)</span><br><span class="line"> - [<span class="link_label">第一节</span>](<span class="link_url">chapter2/section1.md</span>)</span><br><span class="line"> - [<span class="link_label">第二节</span>](<span class="link_url">chapter2/section2.md</span>)</span><br><span class="line"><span class="bullet">* </span>[<span class="link_label">结束</span>](<span class="link_url">end/README.md</span>)</span><br></pre></td></tr></table></figure></p>
-<p>简单提下, 这个SUMMARY.md文件是一个内容组织文件, gitbook通过读取这个文件来生成目录. 从md语法的角度来说, 是一堆嵌套的链接列表.</p>
-<h1 id="进阶">进阶</h1><p>其实网上的快速入门教程不少, 不过由于改版的关系, 有些操作逻辑过时了, 好在大差不差, 官方文档没找到的情况下, 看着前人的资料也算是深入摆弄成功了.<br>我把参考放在了文末的References中, 这里提下我自己趟过的雷区.</p>
-<ul>
-<li>npm命令行工具从 <code>npm install -g gitbook</code>改为了<code>npm install -g gitbook-cli</code>. 如果装错, 需先卸载前者.</li>
-<li>在对应目录下键入<code>gitbook serve</code>命令, 就可以通过localhost:4000 预览生成的以网页形式组织的书籍.</li>
-<li>如果绑定的仓库名改名了. 那对应的绑定也要改名, 同时还得通过<code>add webhooks</code>去先删除旧的hook, 添加新的hook.</li>
-</ul>
-<h1 id="缺点">缺点</h1><p>从国内访问GitBook比较慢, 我看到好多书都并不以xx.gitbooks.io开头, 而是移到了国内. 好在gitbook是支持绑定域名的, 所以速度敏感的话, 可以参考资料进行迁移. 也有教程是介绍发布到GitHub Pages的.</p>
-<h1 id="ChangeLog">ChangeLog</h1><ul>
-<li>12-05<br>最近我把为知笔记里的内容稍作了整理, 放到了gitbook上, 删掉了之前的项目lol, 书籍地址请戳<a href="https://tink.gitbooks.io/fe-collections/content/index.html" target="_blank" rel="external">我的前端手册</a></li>
-</ul>
-<h1 id="References">References</h1><ul>
-<li><a href="http://www.chengweiyang.cn/gitbook/index.html" target="_blank" rel="external">GitBook简明教程</a><br>这篇讲到了集成GitHub, <a href="http://www.chengweiyang.cn/gitbook/gitbook.com/config/domain.html" target="_blank" rel="external">绑定域名</a>, <a href="http://www.chengweiyang.cn/gitbook/github-pages/README.html" target="_blank" rel="external">发布到GitHub Pages</a>.</li>
-<li><a href="http://blog.csdn.net/xiaocainiaoshangxiao/article/details/46882921" target="_blank" rel="external">gitbook安装与使用</a><br>这篇有讲到输出pdf的出错和解决办法</li>
-</ul>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/11/12/modularity/" itemprop="url">
-                  JS模块化
-                </a>
+                JS模块化
               
             
           </h1>
@@ -325,10 +220,7 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <blockquote class="blockquote-center"><p>JS模块化的历史演进、ES6 Module和模块管理工具</p>
+        <span itemprop="articleBody"><blockquote class="blockquote-center"><p>JS模块化的历史演进、ES6 Module和模块管理工具</p>
 </blockquote>
 <p>像我这种从java入门编程的人, 在学习java的时候, 可能对模块化并没有太多的认识, 因为java中一个类一个文件, 引用其他类只需<code>import</code>导入, 结构十分清晰. 就像人每时每刻都在呼吸空气, 对空气的感觉并没有那么敏感, 直到有人抽走了他周身的空气, 他才会感觉将要窒息. 是的, 就好像我玩起了Node, 立志做个前端(此处应有表情).</p>
 <p>在前端, 起初这里根本就没有什么模块化, 再后来, 我发现这里存在着各种各样的实现方法, 真是官方逼死同人哇. 这让原本习惯写后端的我感觉有些头疼, 原来我以为所有的编程语言都自带模块化标准呢.</p>
@@ -495,280 +387,59 @@
 <li>15-11-21<br>更新了SeaJs的<a href="http://www.zhihu.com/question/34756861" target="_blank" rel="external">讣告</a><br>更新了bower的讣告</li>
 <li>15-12-07<br>重写了前端模块化管理工具的部分, 去掉了没有用过的工具的过多的介绍, 将webpack写成一篇新的文章.<br>新增了ES6 Module的内容</li>
 </ul>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/10/25/js-scope/" itemprop="url">
-                  让我们一层一层地剥开作用域
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-25T08:31:25+08:00" content="2015-10-25">
-              2015-10-25
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/js/" rel="tag">#js</a>
           
-            
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <span itemprop="articleBody">
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
             
-              <blockquote class="blockquote-center"><p>为什么我的眼中常含泪水? 是洋葱, 布兰登·艾克在js里放了洋葱…</p>
-</blockquote>
-<p>js中变量的作用域, 只有全局作用域和<strong>函数作用域</strong>, 不支持类C语言中的块级作用域(一个花括号即一个作用域.)</p>
-<p>全局作用域没什么好讲的, 全局变量有全局作用域. 下面主要讲函数作用域.</p>
-<h1 id="表现">表现</h1><p>定义在函数内部的变量和参数, 在函数外部不可见, 在函数内部任何位置的变量则在函数内任何位置都可见.</p>
-<h1 id="实现">实现</h1><p>js通过<strong>作用域链Scope Chain</strong>来实现作用域, 与C不同, js的作用域链不是基于栈而是基于列表的.</p>
-<p>1  当定义一个函数时, 将该时刻的作用域链连接到这个函数对象的<strong>[[scope]]</strong>属性.<br>[[scope]]是一个内部属性, 仅供js引擎访问, 它包含了函数被创建的作用域中的对象的集合.</p>
-<p>2  当调用这个函数时, 会创建一个叫<strong>执行时上下文(execution context)</strong>的内部对象, 它定义了函数执行时的环境.<br>每个执行时上下文都会有自己的作用域链用于标识符解析, 这个作用域链先是被初始化当前执行函数的[[scope]]中所包含的所有对象, 然后再将一个新创建的叫<strong>活动对象(activation object)</strong>的对象推入到作用域链的最前端.<br>活动对象中包含了函数的所有局部变量, 命名参数, 参数集合和this.</p>
-<p>当执行时上下文被销毁, 活动对象也随之销毁.</p>
-<p>3  在发生标识符解析(或称<strong>变量解析variable resolution</strong>)的时候, 就逆向查询当前作用域链的每一个活动对象的属性.<br>如果找到同名的就返回, 找不到, 那就是这个标识符没有被定义, 抛出ReferenceError.</p>
-<h2 id="用实例表述">用实例表述</h2><h3 id="定义时刻">定义时刻</h3><ul>
-<li>创建[[scope]]属性, 收集保存作用域内的被创建的对象.</li>
-<li>把[[scope]]属性链接到作用域链</li>
-<li>设置[[scope]]属性指向的活动对象(本例为全局活动对象window activation object)</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">arg1, arg2</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> mood = arg1 + arg2;  <span class="comment">// 调试点1</span></span><br><span class="line">  <span class="keyword">var</span> moha = makeABigNews();</span><br><span class="line">  moha();  <span class="comment">// 调试点4</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeABigNews</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 调试点2</span></span><br><span class="line">  <span class="keyword">var</span> mood = <span class="string">'angry!'</span>;</span><br><span class="line">  <span class="keyword">var</span> result = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 调试点3</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'I am '</span> + mood);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="调用时刻">调用时刻</h3><ul>
-<li>创建activeObj(假设名)活动对象, 同时创建arguments属性.</li>
-<li><p>以保存为属性的形式, 将函数的每一个<strong>形参</strong>和<strong>局部变量</strong>添加到活动对象中</p>
-<p>比如activeObj.arg1, activeObj.arg2, activeObj.prop</p>
-</li>
-<li>把实参赋给形参</li>
-<li>把activeObj活动对象作为作用域链最前端</li>
-<li>把fun函数的[[scope]]属性所指向的活动对象(假设在浏览器中的话, 本例为window activation object)也加入到作用域链</li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调试点0</span></span><br><span class="line"><span class="function"><span class="title">fun</span><span class="params">('excited', '!')</span>; <span class="comment">// I am angry!</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="图表展示流">图表展示流</h3><p>1  定义时<br><img src="https://ooo.0o0.ooo/2015/12/05/56639d1fafd6e.png" alt="定义时作用域链"></p>
-<p>2  执行时<br><img src="https://ooo.0o0.ooo/2015/12/05/5663b3a43220f.png" alt="执行时作用域链"></p>
-<h2 id="调试追踪">调试追踪</h2><p>还以上面的代码为例, 配合chrome-devtool, 查看作用域链的变化, 讲讲为什么最终输出<code>I am angry!</code>.</p>
-<p>调试点的编号也指明了调试时解释跳转的顺序.</p>
-<p>1  当调用fun函数的时候, 其作用域链是由{window activation object}-&gt;{activeObj}组成的.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 刚刚进入fun函数, 即源码处的调试点1</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     <span class="built_in">arguments</span>: [<span class="string">'excited'</span>, <span class="string">'!'</span>],</span><br><span class="line">     arg1: <span class="string">'excited'</span>,</span><br><span class="line">     arg2: <span class="string">'!'</span>,</span><br><span class="line">     mood: <span class="literal">undefined</span>,</span><br><span class="line">     moha: <span class="literal">undefined</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     <span class="built_in">window</span> activation object</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
-<p>2  当调用进入makeABigNews的函数体的时候, 此时makeABigNews的作用域链为</p>
-<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 对应调试点<span class="number">2</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     mood: undefined,</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window activation <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
-<p>3  在定义result函数的时候, result函数的scope为</p>
-<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 对应调试点<span class="number">3</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     mood: 'angry!',</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window activation <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
-<p>4  从makeABigNews函数返回以后, 在fun函数中调用result的时候, 发生了标识符解析, 而此时的作用域链为</p>
-<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 对应调试点<span class="number">4</span></span><br><span class="line">[[scope chain]] = [</span><br><span class="line">&#123;</span><br><span class="line">     <span class="literal">result</span> call <span class="keyword">object</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">     mood: 'angry!',</span><br><span class="line">     <span class="literal">result</span>: undefined</span><br><span class="line">&#125;, &#123;</span><br><span class="line">     window activation <span class="keyword">object</span></span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
-<p>可以看到, 这时候并不包含fun的活动对象, 所以返回的是makeABigNews活动对象中的mood属性.</p>
-<h2 id="特例">特例</h2><p>通过构造器创建的函数是访问不到外层的局部变量的.</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> func = <span class="keyword">new</span> <span class="function"><span class="keyword">Function</span><span class="params">(<span class="string">"console.log(typeof i);"</span>)</span></span>;</span><br><span class="line">    func(); <span class="comment">// undefined</span></span><br><span class="line">&#125;</span><br><span class="line">outer();</span><br></pre></td></tr></table></figure>
-<h1 id="总结">总结</h1><ul>
-<li>在定义函数时, 就决定了函数的scope属性, 其作用域也在那时被确定下来.</li>
-<li>由于逆向查找, 标识符所在位置越深, 读写越慢, 所以少用全局变量.</li>
-<li>一个跨作用域的变量被引用了一次以上, 那么最好把它变成局部变量再使用.</li>
-</ul>
-<h1 id="Todo">Todo</h1><ul>
-<li>ES6中的模块作用域</li>
-<li>ES6中的let带来的块级作用域</li>
-</ul>
-<h1 id="References">References</h1><ul>
-<li><a href="http://www.cnblogs.com/lhb25/archive/2011/09/06/javascript-scope-chain.html" target="_blank" rel="external">JavaScript 开发进阶：理解 JavaScript 作用域和作用域链</a></li>
-<li><a href="http://www.laruence.com/2009/05/28/863.html" target="_blank" rel="external">Javascript作用域原理 by laruence</a></li>
-</ul>
-
+              <a href="/2015/11/30/amway-gitbook/" rel="prev">
+                <i class="fa fa-chevron-left"></i> Gitbook
+              </a>
             
-          </span>
-        
-      
-    </div>
+          </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/10/25/js-scope/" rel="next">
+                让我们一层一层地剥开作用域 <i class="fa fa-chevron-right"></i>
+              </a>
             
-              
-                <a class="post-title-link" href="/2015/09/18/the-way-to-build-my-blog/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-09-18T20:02:55+08:00" content="2015-09-18">
-              2015-09-18
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <blockquote class="blockquote-center"><p>在世界的中心呼唤爱</p>
-</blockquote>
-<h1 id="为什么要开博客">为什么要开博客</h1><p>现在社交网站流行, 玩博客的其实只剩下程序员和一些非主流了. 而玩这种非社交类博客的, 更是少之又少, 基本除了爱折腾的程序员就没别人了.<br>我之前用过Lofter, 社区氛围不错, 博客的浏览量也还行, 版式算是我用过的博客中最好看的. 文青时代的我还使用过豆瓣日记, 写了不少小说. 有一天心血来潮打开了本地保存的副本, 吓得我赶紧从床上跳下来把这些丢人的玩意儿全删了. 更远古的QQ日志就不谈了, 像我们这么文艺的少年为了bigger, 高中的时候就关闭了空间.</p>
-<p>做程序员并不是一件早已打算的事情, 刚上大学那会儿我还是想成为一名作家, 业余也好, 写一些严肃的不媚俗的文字. 耕纸细作也罢, 仅止于记录也好, 没有停止过写字. 事实证明这并不算是无用功, 就算我写的大部分文字都没有放到任何公开的地方, 就算它们的读者唯有我一个, 这段时间磨砺出来的阅读和写作的习惯, 后来帮助我成为一个程序员, 总算是有点帮助的.<br>比如, 比起视频, 我更爱直接看文档, 确实这样也更快些. 看的时候也禁不住要打开编辑器记下来, 像在纸上圈圈点点一般标记一番, 最后再排个版. 看起来虽然蛮花工夫发, 但我以为这有助于记忆和固化.</p>
-<p>然而, 仅仅是记录还不够, 如果要成体系地理解一个知识原理, 使用费曼学习法记忆效果更高, 这要求我将我所学习的知识, 以尽可能让人快速理解的方式写出来. 实践中, 写博客可能是最好的.</p>
-<p>关于选什么博客, 本来考虑过博客园, csdn, 简书以及一些庞的小站, 但前两者对markdown支持得还不够好, 简书什么的, 又不太喜欢那边的氛围, 最后还是选择在github上建立一个github page了, 提交也方便些.</p>
-<h1 id="构建技术">构建技术</h1><p>github的个人博客建立起来很简单, 只需要将仓库名设置成username.github.io, 再在仓库里放进静态网页的代码就ok了, 访问username.github.io这个域名时, 它会自动读取仓库中的index.html. 理论上, 只要提供对应的css和js, 能生成一个漂亮的页面.</p>
-<p>不过作为尝鲜, 我还是从简单的形式开始, 使用了hexo作为构建工具. 在此之前看了jelly等其他工具, 不过hexo是基于npm的, 当时我正好在学习nodejs, 颇感亲切, 毫不犹豫地选用了.</p>
-<p>hexo使用起来基本没什么难度, 简单的几行命令就帮助我完成了所有的工作.</p>
-<ul>
-<li><code>hexo new &#39;title&#39;</code></li>
-</ul>
-<p>新建一个名为title的博文, 其实它只是在<code>source/_posts</code>文件下新建了一个md文件. 所以一般我也不用这个命令, 直接在该文件下新建. 不过命令生成的文件会在开头自带标题和日期, 像是这样<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: "Hello World"</span><br><span class="line">date: 2015-9-18 20:02:55</span><br><span class="line"><span class="header">tags:</span><br><span class="line">---</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><code>hexo server</code></li>
-</ul>
-<p>打开localhost:4000实时预览生成的页面</p>
-<ul>
-<li><code>hexo generate</code></li>
-</ul>
-<p>读取source目录下的_posts文件夹, 然后生成html和对应的css, js文件到<code>.deploy_git</code>文件夹中. 如果把favicon.ico图片也放到source文件夹下, hexo就会读取到这个名称的文件, 把它作为博客的标签页图标.</p>
-<ul>
-<li><code>hexo deploy</code></li>
-</ul>
-<p>部署博客, 把<code>.deploy_git</code>文件下的内容提交到绑定的仓库中</p>
-<p>这四个指令非常简单, 配好git就能使用.</p>
-<p>关于样式, 我用的是<code>NexT</code>主题, 引用来源已经标注在了博客的页脚. 使用主题的一点好处是, 免去了自己写css的麻烦, 而且这套主题真的蛮简约精致的, 我很喜欢.<br>稍显瑕疵的是, 块与块之间的间距稍微难看, 比如说标题和文段之间, 文段和图片之间. 我本人也比较喜欢在中文输入法下使用英文标点, 以免写程序的时候出现不必要的麻烦, 博客里显示出来就有点不太美观了. 大标题小标题之间的字号也差异过小.</p>
-<p>诶, 有时间一定得调整哈. 要是能顺便改个自己的主题出来, 当然更好啦.</p>
-<h1 id="markdown编辑器">markdown编辑器</h1><p>早期的时候, 我跟着知乎上的建议, 摆弄过印象笔记, 为知笔记, 以及诸如此类的种种笔记类产品. 为知笔记我现在还用着, 但我觉得它有些繁琐, 写到一半总要照顾样式. 编辑模式下和阅读模式下, 有些格式存在显示差异, 这让我很烦躁.<br>后来我发现了markdown, 并尝试用markdown来进行一切文档写作, 我才有了那么一丝快意. markdown解放了我在编写时的心智负担, 至少让我把注意力重新放回内容本身了. 而markdown整个格式本身就很适合解析到html, hexo选择了markdown, 也是我选择hexo的一部分原因.</p>
-<p>为知笔记当然也是支持markdown的, 但是支持得还不够好. 随着为知打开越来越慢, 我用了一些其他编辑器, 大多都是在线编辑器, 这不太好, 我还是想在本地写作. 我用过一段时间的cmd markdown, 在线的体验非常好, pc版是用nw技术构建的, 所以几乎和网页版一致. 问题在于, 并不能同步地编辑我本地的文件.</p>
-<p>目前我一般用vs code写markdown, 总体还算不错的, 编辑器内分屏, 可以实现一般markdown编辑器左边写作, 右边实时预览的功能. 但是高亮不太好, 也不支持导出html, 当然也不可能支持多端同步. 总之比起mac上的mou来说真的差远了.</p>
-<p>说真的, 我倒是想自己写一个markdown编辑器, 并且有了一点思路, 比如markdown渲染的解析可能需要一些编译原理的知识, 寒假的时候我打算看下parser方面的知识, 着手实现一个.</p>
-<h1 id="图床">图床</h1><p>在编写md文档的时候, 文章里的图片其实都是链接, 语法是<code>![图片名](外链网址 &quot;图片描述&quot;)</code>.<br>一般来说, 写文章用到的图片, 很多是临时做的图, 没法使用现成的图片外链. 所以需要将图片上传到网络上的某处空间, 并返回一个外链以供使用.<br>这种专门用于存储图片的空间, 又叫做图床. 国内有很多免费的图床, 以图床为关键字, 随便百度一下, 一抓一大把. 在国内其实主要还是以申请<code>七牛</code>或者<code>又拍</code>的账号, 利用刚注册的那十多个G的空间做图床, 其速度很快的.</p>
-<p>不过像我们这种懒人, 肯定是使用免费免注册的图床啦. 在这里推荐一个亲测好用的良心图床</p>
-<p><a href="#https://sm.ms/">sm.ms</a>.</p>
-<p>看这个名字就知道, 这是<code>V2EX</code>的一个绅♂士做的一个图床. 据说能够达到无损. 每张图片最大5M, 支持gif.<br>速度上, 本博客的所有图片都是来自sm.ms的, 也足够称得上极快.</p>
-<p>至于使用方法相当简单, 上传图片, 然后会生成外链和各种格式的引用.<br><img src="https://ooo.0o0.ooo/2015/10/30/563365ec6aa27.png" alt="sm.ms的输出外链和引用" title="sm.ms的输出外链和引用"><br>想要验证sm.ms图片显示速度的, 顺便可以刷新下页面看看加载的效果.<br>PS. 这张图是用QQ截图截的, 可能本身就会有点糊, 要看是否无损, 还是比较下博客里其它的图片吧.</p>
-<h1 id="changelog">changelog</h1><ul>
-<li>15-12-05</li>
-</ul>
-<p>更新了markdown编辑器一节</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+          </div>
         
       </div>
 
@@ -786,6 +457,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -833,6 +513,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文章的结构"><span class="nav-number">1.</span> <span class="nav-text">文章的结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模块化的好处"><span class="nav-number">2.</span> <span class="nav-text">模块化的好处</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命名冲突"><span class="nav-number">2.1.</span> <span class="nav-text">命名冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件依赖"><span class="nav-number">2.2.</span> <span class="nav-text">文件依赖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传统的模块化解决方案"><span class="nav-number">3.</span> <span class="nav-text">传统的模块化解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单地封装成一个函数"><span class="nav-number">3.1.</span> <span class="nav-text">简单地封装成一个函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装成一个对象"><span class="nav-number">3.2.</span> <span class="nav-text">封装成一个对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#立即执行函数"><span class="nav-number">3.3.</span> <span class="nav-text">立即执行函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块扩展augmentation"><span class="nav-number">3.4.</span> <span class="nav-text">模块扩展augmentation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入全局变量"><span class="nav-number">3.5.</span> <span class="nav-text">引入全局变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最近一波模块化规范"><span class="nav-number">4.</span> <span class="nav-text">最近一波模块化规范</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CommonJS"><span class="nav-number">4.1.</span> <span class="nav-text">CommonJS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分流"><span class="nav-number">4.2.</span> <span class="nav-text">分流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMD_&_RequireJS"><span class="nav-number">4.3.</span> <span class="nav-text">AMD & RequireJS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CMD_&_SeaJS"><span class="nav-number">4.4.</span> <span class="nav-text">CMD & SeaJS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UMD_&_ES6_Module_Transpiler"><span class="nav-number">4.5.</span> <span class="nav-text">UMD & ES6 Module Transpiler</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6_Module"><span class="nav-number">5.</span> <span class="nav-text">ES6 Module</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#export_&_import_导出和导入"><span class="nav-number">5.1.</span> <span class="nav-text">export & import 导出和导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#as_重命名"><span class="nav-number">5.2.</span> <span class="nav-text">as 重命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default_默认导出"><span class="nav-number">5.3.</span> <span class="nav-text">default 默认导出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#*_模块对象"><span class="nav-number">5.4.</span> <span class="nav-text">* 模块对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#export_from_聚合模块"><span class="nav-number">5.5.</span> <span class="nav-text">export from 聚合模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块加载的细节"><span class="nav-number">5.6.</span> <span class="nav-text">模块加载的细节</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端模块管理工具"><span class="nav-number">6.</span> <span class="nav-text">前端模块管理工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#npm"><span class="nav-number">6.1.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bower"><span class="nav-number">6.2.</span> <span class="nav-text">bower</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的比较"><span class="nav-number">6.3.</span> <span class="nav-text">我的比较</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">8.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#changeLog"><span class="nav-number">9.</span> <span class="nav-text">changeLog</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
       
 
     </div>
@@ -903,6 +594,165 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
